@@ -38,6 +38,29 @@ python scrape_titles_prices.py -o my_books.csv -p 20
 
 ---
 
+## Zara scraper (Playwright) 🔎
+
+A Playwright-based scraper that can render Zara pages and extract product listings, prices and available sizes.
+
+Install Playwright and dependencies:
+
+```bash
+pip install -r requirements.txt
+playwright install
+```
+
+Run the scraper for a Zara category or search page:
+
+```bash
+python zara_scraper.py --url "https://www.zara.com/us/en/woman-new-in-l1180.html" --output zara_products.csv
+```
+
+Notes & tips:
+- If the site blocks automated requests, run this script locally from your machine (the environment in some CI/cloud containers may be blocked by the site). ⚠️
+- Adjust the maximum number of products with `--max` and turn on headless mode with `--headless`.
+
+---
+
 ## License
 
 This project is for practice and learning. Use responsibly and be polite to websites (rate-limit your requests).
